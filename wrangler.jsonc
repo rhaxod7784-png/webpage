@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "gooreumgom-webpage",
+  "name": "webpage",
   "compatibility_date": "2026-10-12",
   "assets": {
     "directory": "./public"
