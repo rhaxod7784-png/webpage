@@ -8,7 +8,6 @@
 - `/projects/daejeon/`, `/projects/keyboard/`, `/projects/potbreaker/`, `/projects/sayu/`, `/projects/tententen/` : 프로젝트별 출발점, 결정, 구현 및 미검증 과제
 - `/about/` : 나의 이야기
 - `/process/` : 제작 과정
-- `/lab/` : 아이디어 노트
 
 ## 기술
 Cloudflare Workers Static Assets · 순수 HTML/CSS · 모바일 우선.
