@@ -1,10 +1,16 @@
-# 구름곰의 이상한 개발노트
+# 구름곰의 이상한 개발노트 — 개인 프로젝트 포트폴리오
 
-노션 `웹페이지` 기획을 기준으로 제작한 개인 프로젝트 포트폴리오.
+본인이 제작·기획한 작업물을 실제 구현 범위와 검증 상태에 따라 구분해 소개합니다. 기존의 개인 소개와 무채색·모바일 우선 디자인은 유지했습니다.
 
-## 개발
+## 콘텐츠
+- 이야기: 개발을 시작한 배경과 태도
+- 작업물: POT BREAKER / Keyboard Canvas / 대전의 기묘한 여행 (기존 화면 캡처 유지)
+- 개발 중: 사유(SAYU) / 텐텐텐 (미검증 기능과 기획 상태 명시)
+- 제작 과정: 문제 인식 → IA·MVP → AI 보조 개발·이해 → QA·재검토
+- 실험 노트: 추후 아이디어와 학습
 
-Cloudflare Workers Static Assets 배포를 위한 정적 사이트입니다.
+## 개발 및 배포
+Cloudflare Workers Static Assets, GitHub main 브랜치 자동 빌드. 기존 Worker 이름은 `webpage`이며 소스의 Wrangler 설정은 `gooreumgom-webpage`로 불일치하므로 배포 로그에서 실제 대상 Worker를 확인해야 합니다.
 
 ```bash
 npm install
@@ -12,9 +18,5 @@ npm run dev
 npm run deploy
 ```
 
-Cloudflare Workers Builds에서 GitHub 저장소 `rhaxod7784-png/webpage`를 연결하고 빌드 명령 `npm run deploy`를 사용합니다.
-
-## 원칙
-- 원문에서 확인된 소개와 프로젝트 정보만 반영
-- 모바일 우선, 12~16px, 무채색, 시맨틱 HTML
-- 프로젝트 화면은 원본 캡처 파일을 `public/images/`에 추가한 뒤 교체
+## 운영 유의
+공개 배포·로컬 QA·소스 구현·사용자 성과는 별개의 상태입니다. 비공개 소모임 데이터는 공개하지 않으며, 실제 서비스 여부를 과장하지 않습니다.

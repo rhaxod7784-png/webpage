@@ -10,3 +10,34 @@
 .work-image .image-open{position:absolute;right:10px;bottom:10px;background:rgba(255,255,255,.95);color:#222;padding:3px 9px;font-size:12px;font-weight:600;letter-spacing:0}
 .work-image:focus-visible{outline-offset:3px}
 @media(max-width:700px){.work-image{aspect-ratio:4 / 3;padding:0}}
+
+/* Portfolio: retain the existing minimalist monochrome design */
+.site-header nav{flex-wrap:wrap;gap:10px 22px;justify-content:flex-end}
+.project-label{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:12px;color:#777;margin-top:22px}
+.tag{display:inline-block;border:1px solid #ddd;background:#f2f2f2;padding:4px 9px;font-weight:700;font-size:11px;color:#333}
+.project-detail{margin-top:18px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:13px 0;font-size:13px}
+.project-detail summary{font-weight:700;cursor:pointer}
+.project-detail p{font-size:13px;color:#4d4d4d;line-height:1.9;padding-top:10px;margin:0!important}
+.more-projects,.process,.archive{border-top:1px solid #dedede;padding:76px 0 84px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.simple-card{padding:29px;border:1px solid #e7e7e7;background:#fafafa;min-width:0}
+.simple-card>.tag{margin:8px 0 18px}.simple-card h3{font-size:16px}.simple-card h3 small{font-size:12px;font-weight:400;color:#888}
+.simple-card>p:not(.project-number){font-size:13px}.simple-card dl{margin-top:20px}
+.simple-card dl div{display:grid;grid-template-columns:64px 1fr;gap:12px;border-top:1px solid #e6e6e6;padding:12px 0;font-size:12px}
+.simple-card dt{font-weight:700}.simple-card dd{margin:0;color:#555}
+.simple-card .limited{border-top:1px solid #e6e6e6;padding-top:14px;color:#777;margin-bottom:0}
+.process-steps{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.process-steps li{border-top:1px solid #ddd;padding-top:19px}
+.process-steps b{font-size:13px}.process-steps p{font-size:13px;color:#555;margin:12px 0 0}
+.stack{margin-top:40px;background:#f7f7f7;padding:24px}.stack strong{font-size:13px}
+.stack p{margin:8px 0}.stack small{font-size:12px;color:#777}
+.archive-row{display:grid;grid-template-columns:170px 1fr;gap:20px;border-top:1px solid #ddd;padding:17px 0}
+.archive-row:last-of-type{border-bottom:1px solid #ddd}
+.archive-row strong{font-size:12px}.archive-row p{margin:0;color:#555}
+.closing{margin:40px 0 0}
+@media(max-width:720px){.cards,.process-steps{grid-template-columns:1fr}
+.more-projects,.process,.archive{padding:55px 0 65px}
+.simple-card{padding:24px}.archive-row{grid-template-columns:1fr;gap:4px}
+.site-header{min-height:75px;height:auto;padding:14px 0;gap:15px;align-items:flex-start}
+.site-header .brand{font-size:12px;max-width:160px;white-space:normal;overflow-wrap:anywhere}
+.site-header nav{gap:6px 12px;max-width:190px}.site-header nav a{font-size:12px}}
