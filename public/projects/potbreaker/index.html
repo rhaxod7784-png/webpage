@@ -1,5 +1,5 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>POT BREAKER | 구름곰의 이상한 개발노트</title><meta name="description" content="POT BREAKER의 개발 의도, Android 구현, 변경 이력과 남은 실험"><link rel="stylesheet" href="/journal.css"></head><body><a class="skip" href="#main">본문으로 이동</a><header class="site-header"><div class="container head"><a class="brand" href="/">ʕ•ᴥ•ʔ <span>구름곰의 이상한 개발노트<small>PERSONAL DEVELOPMENT JOURNAL</small></span></a><nav aria-label="주 메뉴"><a href="/">처음</a><a href="/projects/">작업물</a><a href="/about/">나의 이야기</a><a href="/process/">만드는 방식</a></nav></div></header><main id="main"><div class="container story-intro"><p class="overline"><a href="/projects/">← 프로젝트 목록</a><span>03 / CASE STUDY</span></p><p class="kicker">EXPERIMENTAL GAME / FIRST BUILD</p><h1>POT BREAKER</h1><p class="lede">플레이어를 곤란하게 만드는 규칙은 어디까지 게임의 재미가 될 수 있을까.</p><span class="state">게임 구현 · Android 소스 v0.16.0</span><figure class="hero-shot"><img src="/images/potbreaker.png" alt="POT BREAKER 게임 화면"><figcaption>실제 게임 화면 캡처</figcaption></figure></div>
-<div class="container story-layout"><aside class="toc"><strong>이 프로젝트의 고민</strong><a href="#p1">01 / 출발점</a><a href="#p2">02 / 첫 습작</a><a href="#p3">03 / Android</a><a href="#p4">04 / 다음 질문</a></aside><div class="article">
+<div class="container story-layout"><aside class="toc"><strong>이 프로젝트의 고민</strong><a href="#p1">01 / 출발점</a><a href="#p2">02 / 첫 습작</a><a href="#p3">03 / Android</a><a href="#p4">04 / 다음 질문</a><a href="#tech-used">사용 기술</a></aside><div class="article">
 <section class="entry" id="p1"><span class="entry-no">01 / 만든 기록</span><h2>어떻게 하면 유저를 빡치게 할까?</h2><p>게임을 하다 보면 이기는 것만큼이나 사람을 열받게 하는 장면이 기억에 남기도 합니다. 말도 안 되는 상황에서 웃음이 나오거나, 이번에는 반드시 넘기겠다고 다시 달려드는 순간 말입니다.</p>
 <p>그래서 생각했습니다. 아예 유저를 짜증 나게 만드는 것을 목표로 게임을 만들면 어떨까?</p><blockquote>어떻게 하면 유저를 빡치게 할 수 있을까?</blockquote>
 <p>장난처럼 시작했지만, 막상 만들어보니 어디까지 불편해야 재미가 되고 어디서부터는 그냥 그만두고 싶어지는지 구분하는 것이 어려웠습니다.</p></section>
@@ -12,5 +12,17 @@
 <section class="entry" id="p4"><span class="entry-no">04 / 만든 기록</span><h2>사람들은 진짜 다시 플레이할까?</h2><p>제가 재밌다고 생각한 장난이 다른 사람에게도 재미있을지는 아직 모르겠습니다.</p>
 <p>한 번 실패하고 다시 도전하게 되는 게임을 만들고 싶지만, 불편함이 너무 커지면 그냥 끄고 말 수도 있겠지요. 결국 다른 사람이 플레이하는 모습을 봐야 알 수 있는 부분입니다.</p>
 <p>우선 지금까지 만든 것들을 계속 고치면서, 어디에서 웃고 어디에서 포기하는지 확인해 보고 싶습니다.</p></section>
+<section class="tech-summary" id="tech-used" aria-labelledby="tech-used-title">
+<span class="entry-no">USED TECHNOLOGIES</span>
+<h2 id="tech-used-title">사용한 기술과 역할</h2>
+<p>처음에는 브라우저 게임으로 만들었고, 나중에 Android 앱으로 실행하는 방법을 붙였습니다.</p>
+<dl class="tech-list">
+<div class="tech-row"><dt>게임 화면</dt><dd><strong>HTML · CSS · JavaScript · Canvas</strong><span>게임 화면, 입력, 타이머와 동작 규칙을 브라우저에서 처리합니다.</span></dd></div>
+<div class="tech-row"><dt>Android 앱</dt><dd><strong>Java · Android WebView</strong><span>웹게임 파일을 앱 안에 넣고, 휴대폰 가로 화면에서 실행하도록 했습니다.</span></dd></div>
+<div class="tech-row"><dt>휴대폰 진동</dt><dd><strong>JavaScriptInterface · Android Vibrator</strong><span>게임의 JavaScript와 Android 진동 기능을 연결했습니다.</span></dd></div>
+<div class="tech-row"><dt>기록 저장</dt><dd><strong>localStorage</strong><span>승리 기록을 앱이 실행되는 기기 안에 저장합니다.</span></dd></div>
+<div class="tech-row"><dt>빌드</dt><dd><strong>Android Studio · Gradle</strong><span>Android 프로젝트를 관리하고 APK로 패키징할 수 있게 구성했습니다.</span></dd></div>
+</dl>
+</section>
 <aside class="source"><h3>게임 직접 해보기</h3><p>어느 순간 짜증이 나는지 직접 플레이해 볼 수 있습니다.</p><div class="source-buttons"><a href="https://potbreaker.rhaxod7784.workers.dev/" target="_blank" rel="noopener noreferrer">게임 플레이 ↗</a></div></aside><a class="next" href="/projects/sayu/">다음 기록: 사유의 사유화 →</a></div></div></main>
 <footer class="footer"><div class="container footer-grid"><div><strong>구름곰의 이상한 개발노트</strong><p>호기심을 결과물로 만들고, 결과물을 다시 이해하는 기록.</p></div><div><a href="/projects/">프로젝트</a><a href="/process/">개발 과정</a><a href="mailto:rhaxod7784@gmail.com">연락하기</a></div></div><div class="container footnote">Acta Non Verba · 말보다 행동으로 · 2026</div></footer></body></html>
