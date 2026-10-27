@@ -465,3 +465,13 @@ body { line-height: 1.58; }
   .keyboard-hint { font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) { .folder-card { transition: none; } }
+
+
+/* Compact phone reading surface: remove the illegible decorative side spine. */
+@media (max-width: 600px) {
+  .case-main { display: block; }
+  .binder-spine { display: none; }
+  .paper-page { padding-left: 30px; }
+  .paper-holes { left: 4px; }
+  .document-frame::before { width: 15px; }
+}
