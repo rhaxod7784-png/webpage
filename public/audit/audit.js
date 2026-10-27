@@ -13,7 +13,7 @@
   const announcement = document.getElementById("page-announcement");
   const sealedFile = document.querySelector("[data-sealed-gate]");
   const sealedSummary = sealedFile && sealedFile.querySelector("summary");
-  const sealedNotice = sealedFile && sealedFile.querySelector("[data-sealed-locked]");
+  const sealedNotice = document.querySelector("[data-sealed-locked]");
   const readStateKey = "cbzp-audit-read-v1";
   const caseId = (document.querySelector(".binder-num")?.textContent || "").trim();
   const total = pages.length;
