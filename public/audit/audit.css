@@ -494,3 +494,10 @@ body { line-height: 1.58; }
   .global-foot { flex-wrap: wrap; gap: 6px 14px; padding-block: 12px; }
   .global-foot .footer-instagram { font-size: 12px; }
 }
+
+/* Keep prior records inaccessible until every registered diary page has been visited. */
+.sealed-file.is-locked > summary { cursor: not-allowed; }
+.sealed-file.is-locked > summary:hover { background: transparent; }
+.sealed-file.is-locked .sealed-file-content { display: none !important; }
+.sealed-gate-note { margin: 0; padding: 0 16px 14px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.sealed-gate-note[hidden] { display: none; }
