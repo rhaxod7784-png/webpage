@@ -240,3 +240,238 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px soli
   html { scroll-behavior: auto; }
   .folder-card { transition: none; }
 }
+
+
+/* ==========================================================================
+   Readability pass: one clear destination, one clear reading action.
+   Keeps the white archive/document visual language.
+   ========================================================================== */
+body { line-height: 1.58; }
+.global-head { min-height: 66px; }
+.wordmark { letter-spacing: -.01em; font-size: 22px; }
+.head-sub { opacity: .64; }
+.archive-main {
+  width: min(860px, calc(100% - 48px));
+  display: block;
+  flex: 1;
+  margin: 0 auto;
+  padding: clamp(38px, 7vh, 72px) 0 64px;
+}
+.archive-intro { padding: 0; }
+.archive-intro .overline { margin: 0 0 10px; font-size: 12px; letter-spacing: .065em; }
+.archive-intro h1 {
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.24;
+  margin: 0 0 12px;
+  font-weight: 800;
+  letter-spacing: -.055em;
+}
+.archive-description { margin: 0; font-size: 16px; line-height: 1.65; color: #555; }
+.shelf-zone {
+  margin-top: 34px;
+  padding: 19px 22px 26px;
+  box-shadow: none;
+  border: 1px solid #e4e4e4;
+}
+.shelf-label { margin-bottom: 19px; font-size: 13px; color: #333; }
+.shelf-label span:last-child { font-size: 12px; color: #666; }
+.folder-card { max-width: none; padding-top: 23px; }
+.folder-tab { font-size: 11px; }
+.folder-sheet { inset: 25px 6px 0; transform: rotate(.45deg); }
+.folder-sheet.ghost-two { inset: 26px 10px 0; transform: rotate(-.35deg); }
+.folder-face {
+  min-height: 0;
+  padding: 21px 25px 18px;
+  border-color: #c9c9c9;
+  background: #f8f8f7;
+  box-shadow: none;
+}
+.folder-topline { font-size: 11px; padding-bottom: 12px; }
+.folder-body {
+  display: grid;
+  grid-template-columns: 126px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  padding: 20px 0 22px;
+}
+.folder-number {
+  margin: 0;
+  align-self: center;
+  display: block;
+  font-size: 14px;
+  line-height: 1.2;
+  border-right: 1px solid #cfcfcf;
+}
+.folder-number strong { display: block; font-size: 58px; font-variant-numeric: tabular-nums; line-height: 1.05; }
+.folder-title { display: block; font-size: clamp(23px, 3vw, 32px); margin: 0 0 7px; line-height: 1.4; }
+.folder-description { display: block; font-size: 15px; font-weight: 700; color: #464646; margin-bottom: 5px; }
+.folder-metadata { display: block; font-size: 13px; color: #626262; }
+.folder-bottom {
+  padding: 12px 0 0;
+  font-size: 14px;
+  color: #191919;
+  border-color: #b8b8b8;
+}
+.folder-bottom span:last-child { font-size: 20px; }
+.folder-card:hover .folder-bottom { text-decoration: underline; text-underline-offset: 3px; }
+.archive-intro .intro-no, .archive-intro .archive-micro, .shelf-hint { display: none; }
+
+/* Case-file reading order: navigation, current page, then readable document. */
+.case-main {
+  width: min(1050px, calc(100% - 48px));
+  grid-template-columns: 28px minmax(0, 1fr);
+  padding: 28px 0 48px;
+}
+.binder-spine { margin-top: 93px; min-height: 510px; padding: 15px 1px; gap: 20px; background: #f8f8f8; }
+.binder-tag { font-size: 11px; }
+.binder-num { font-size: 16px; }
+.document-index {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0 0 10px;
+  padding: 9px 15px;
+  background: #fff;
+}
+.index-caption { font-size: 12px; color: #666; }
+.index-buttons { flex-wrap: wrap; gap: 4px; }
+.index-buttons button {
+  min-height: 44px;
+  padding: 7px 12px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+.index-buttons button span { font-size: 11px; color: #777; }
+.index-buttons button[aria-current="page"] {
+  background: #f1f1f1;
+  border: 1px solid #b2b2b2;
+  font-weight: 900;
+}
+.paper-utility {
+  padding: 0 0 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.paper-utility strong { font-weight: 850; letter-spacing: -.01em; color: #242424; }
+.quick-actions { display: flex; gap: 7px; }
+.quick-actions button {
+  min-height: 42px;
+  min-width: 108px;
+  background: white;
+  padding: 8px 12px;
+  border: 1px solid #b6b6b6;
+  font-size: 13px;
+  font-weight: 800;
+  color: #222;
+}
+.quick-actions button:hover:not(:disabled) { background: #f3f3f3; }
+.quick-actions button:disabled { opacity: .42; cursor: not-allowed; }
+.quick-actions button:last-child:not(:disabled) { border-color: #555; }
+.document-frame { min-height: 0; box-shadow: none; border-color: #d4d4d4; }
+.document-frame::before { width: 22px; }
+.paper-holes { left: 6px; }
+.paper-holes i { width: 8px; height: 8px; }
+.paper-page {
+  min-height: 470px;
+  padding: 25px clamp(22px, 4.6vw, 56px) 25px clamp(37px, 5vw, 69px);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.paper-cover { padding: 27px 0 20px; }
+.rubber-stamp { font-size: 11px; margin: 0 0 25px; }
+.report-no strong { font-size: 50px; }
+.paper-cover h1 { font-size: clamp(30px, 4vw, 45px); margin: 12px 0 19px; }
+.file-facts { gap: 10px 20px; }
+.file-facts dt { font-size: 13px; }
+.file-facts dd { font-size: 15px; }
+.seal { width: 69px; height: 69px; font-size: 19px; }
+.page-kicker { margin: 22px 0 7px; font-size: 12px; }
+.paper-page h2 { font-size: clamp(27px, 3.2vw, 35px); margin-bottom: 10px; }
+.paper-lede { font-size: 15px; margin-bottom: 16px; }
+.incident-list li { padding: 9px 0; }
+.incident-list strong { font-size: 15px; }
+.incident-list p { font-size: 14px; line-height: 1.6; }
+.memo-box { margin: 16px 0; }
+.memo-box span, .memo-box p, .margin-note { font-size: 13px; }
+.evidence-grid { gap: 10px; margin-bottom: 14px; }
+.evidence-grid > div { padding: 13px 16px; min-height: 0; }
+.evidence-grid h3 { font-size: 16px; margin: 4px 0; }
+.evidence-grid p { font-size: 14px; }
+.evidence-index, .paper-note { font-size: 12px; }
+.tech-record { grid-template-columns: 105px minmax(0, 1fr); gap: 0 15px; }
+.tech-record > div { padding: 12px 0; }
+.tech-record h3 { font-size: 15px; }
+.tech-record p, .tech-label { font-size: 14px; }
+.attachment-list strong { font-size: 16px; }
+.attachment-list small { font-size: 13px; }
+.sealed-file summary { min-height: 58px; }
+.sealed-file summary strong { font-size: 15px; }
+.seal-index, .seal-hint { font-size: 12px; }
+.sealed-file-content p { font-size: 14px; }
+.origin-link { font-size: 13px; }
+.paper-end { padding-top: 15px; }
+.leaf-controls { padding-top: 13px; }
+.keyboard-hint { margin: 8px 0 0; }
+
+/* Don't squeeze Korean text into two tiny columns on phones. */
+@media (max-width: 850px) {
+  .archive-main { width: min(860px, calc(100% - 36px)); padding: 36px 0 54px; }
+  .case-main { width: calc(100% - 28px); padding-top: 18px; }
+  .binder-spine { margin-top: 96px; }
+  .document-index { display: block; padding: 9px 11px; }
+  .index-caption { display: block; margin: 0 0 7px; }
+  .index-buttons { display: flex; gap: 4px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; }
+}
+@media (max-width: 600px) {
+  .global-head { min-height: 62px; }
+  .head-label { display: none; }
+  .archive-main { padding: 31px 0 46px; }
+  .archive-intro h1 { font-size: clamp(33px, 9vw, 44px); }
+  .archive-description { font-size: 15px; }
+  .shelf-zone { margin-top: 26px; padding: 14px 14px 18px; }
+  .shelf-label { margin-bottom: 12px; }
+  .folder-face { padding: 17px 17px 16px; min-height: 0; }
+  .folder-body { grid-template-columns: 72px 1fr; gap: 13px; padding: 20px 0; }
+  .folder-number { font-size: 12px; }
+  .folder-number strong { font-size: 38px; }
+  .folder-title { font-size: clamp(20px, 6vw, 25px); }
+  .folder-description { font-size: 13px; }
+  .folder-metadata { font-size: 12px; }
+  .folder-bottom { font-size: 13px; }
+  .binder-spine { margin-top: 104px; min-height: 420px; }
+  .paper-utility { gap: 8px; font-size: 13px; }
+  .paper-utility strong { font-size: 13px; }
+  .quick-actions { gap: 5px; }
+  .quick-actions button { min-width: auto; min-height: 44px; padding: 6px 9px; font-size: 12px; }
+  .index-caption { font-size: 11px; }
+  .index-buttons button { font-size: 13px; min-height: 44px; padding: 6px 9px; }
+  .paper-page { min-height: 0; padding: 19px 15px 23px 36px; }
+  .paper-cover { padding: 30px 0 21px; }
+  .paper-cover h1 { font-size: 35px; }
+  .paper-lede { font-size: 14px; }
+  .incident-list strong { font-size: 14px; }
+  .incident-list p { font-size: 14px; }
+  .evidence-grid { grid-template-columns: 1fr; gap: 0; }
+  .evidence-grid > div { border-bottom: 0; padding: 11px 13px; min-height: 0; }
+  .evidence-grid > div:last-child { border-bottom: 1px solid var(--line); }
+  .evidence-grid p { font-size: 14px; line-height: 1.55; }
+  .tech-record { grid-template-columns: 85px 1fr; column-gap: 10px; }
+  .tech-record h3, .tech-record p, .tech-label { font-size: 13px; }
+  .memo-box p, .margin-note { font-size: 13px; }
+  .attachment-list strong { font-size: 15px; }
+  .leaf-controls { justify-content: flex-start; }
+  .keyboard-hint { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .folder-card { transition: none; } }
+
+
+/* Compact phone reading surface: remove the illegible decorative side spine. */
+@media (max-width: 600px) {
+  .case-main { display: block; }
+  .binder-spine { display: none; }
+  .paper-page { padding-left: 30px; }
+  .paper-holes { left: 4px; }
+  .document-frame::before { width: 15px; }
+}
