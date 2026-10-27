@@ -7,6 +7,8 @@
   const prev = document.getElementById("prev-leaf");
   const next = document.getElementById("next-leaf");
   const first = document.getElementById("first-leaf");
+  const prevTop = document.getElementById("prev-top");
+  const nextTop = document.getElementById("next-top");
   const jumps = Array.from(document.querySelectorAll("[data-jump]"));
   const counter = document.getElementById("leaf-counter");
   const fill = document.getElementById("leaf-fill");
@@ -35,6 +37,8 @@
     });
     prev.disabled = current === 0;
     next.disabled = current === total - 1;
+    prevTop.disabled = current === 0;
+    nextTop.disabled = current === total - 1;
     first.disabled = current === 0;
     counter.textContent = String(current + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
     fill.style.width = ((current + 1) * 100 / total) + "%";
@@ -52,6 +56,8 @@
   }
 
   prev.addEventListener("click", () => show(current - 1));
+  prevTop.addEventListener("click", () => show(current - 1));
+  nextTop.addEventListener("click", () => show(current + 1));
   next.addEventListener("click", () => show(current + 1));
   first.addEventListener("click", () => show(0));
   jumps.forEach(button => button.addEventListener("click", () => show(Number(button.dataset.jump))));
