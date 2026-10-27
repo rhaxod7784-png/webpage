@@ -475,3 +475,22 @@ body { line-height: 1.58; }
   .paper-holes { left: 4px; }
   .document-frame::before { width: 15px; }
 }
+
+/* CBZP official Instagram — subdued footer link, visible on every screen. */
+.global-foot .footer-instagram {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #333333;
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+.global-foot .footer-instagram strong { font-size: inherit; font-weight: 800; }
+.global-foot .footer-instagram:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 600px) {
+  .global-foot { flex-wrap: wrap; gap: 6px 14px; padding-block: 12px; }
+  .global-foot .footer-instagram { font-size: 12px; }
+}
