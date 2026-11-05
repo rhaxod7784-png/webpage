@@ -15,7 +15,7 @@
   const sealedSummary = sealedFile && sealedFile.querySelector("summary");
   const sealedNotice = document.querySelector("[data-sealed-locked]");
   const readStateKey = "cbzp-audit-read-v1";
-  const caseId = (document.querySelector(".binder-num")?.textContent || "").trim();
+  const caseId = (document.querySelector(".binder-num")?.getAttribute("data-audit-id") || document.querySelector(".binder-num")?.textContent || "").trim();
   const total = pages.length;
   let registryPromise = null;
   function readState() {

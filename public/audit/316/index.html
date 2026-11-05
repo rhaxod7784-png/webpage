@@ -89,43 +89,13 @@
           <div class="memo-box"><span>감 과장의 여백 메모</span><p>기묘 대리는 모르고 있다. 그런데 당신은 지금 이 기록을 보고 있다.</p></div>
           <div class="paper-end"><span>제316호 / 사건 기록</span><span>02 / 05</span></div>
         </section>
-        <section class="paper-page" data-title="서비스 조사" data-page="2" aria-label="서비스 조사" hidden>
-          <div class="paper-topline"><span>CBZP · 감사원</span><span>기록 / 02</span></div>
-          <p class="page-kicker">SERVICE / 02</p>
-          <h2>대상 서비스 조사</h2>
-          <p class="paper-lede"><strong>대전의 기묘한 여행</strong>은 장소를 선택하고 다음 이동을 탐색하는 웹서비스다.</p><p class="margin-note">열람자에게: 이 서류가 궁금해서 넘어왔다면 조사 목적은 달성한 셈이다.</p>
-          <div class="evidence-grid">
-            <div><span class="evidence-index">01 / 위치</span><h3>출발 지점</h3><p>위치 접근을 통해 현재 위치를 기준으로 장소를 탐색한다.</p></div>
-            <div><span class="evidence-index">02 / 분류</span><h3>카테고리 선택</h3><p>하고 싶은 활동의 카테고리를 선택한다.</p></div>
-            <div><span class="evidence-index">03 / 추천</span><h3>가까운 장소</h3><p>설계상 처음 100m 내 카테고리별 최대 10곳을 보여주고, 필요하면 탐색 범위를 넓힌다.</p></div>
-            <div><span class="evidence-index">04 / 이동</span><h3>상세와 길찾기</h3><p>장소 정보와 이야기를 확인하고 외부 지도 앱으로 이동한다.</p></div>
-          </div>
-          <p class="paper-note">※ 추천 거리와 노출 건수는 초기 기획에 기록된 기준이며, 실제 운영 설정과는 차이가 있을 수 있다.</p>
-          <div class="paper-end"><span>제316호 / 서비스 기록</span><span>03 / 05</span></div>
-        </section>
-        <section class="paper-page" data-title="개발 기록" data-page="3" aria-label="개발 기록" hidden>
-          <div class="paper-topline"><span>CBZP · 감사원</span><span>기록 / 03</span></div>
-          <p class="page-kicker">DEVELOPMENT / 03</p>
-          <h2>개발 기록</h2>
-          <p class="paper-lede">초기 실험과 공개 서비스의 기술 구성을 구분해 기록한다.</p>
-          <div class="tech-record">
-            <div class="tech-label">초기 MVP</div>
-            <div><h3>Python · FastAPI · SQLite · JSON</h3><p>추천 요청과 사용자 행동 이벤트를 다루고, 장소 정보를 읽는 초기 구조.</p></div>
-            <div class="tech-label">공개 서비스</div>
-            <div><h3>JavaScript · Cloudflare Workers · D1</h3><p>추천 요청 처리, 장소 데이터 제공 및 사용자 행동 기록.</p></div>
-            <div class="tech-label">프론트엔드</div>
-            <div><h3>HTML · CSS · JavaScript</h3><p>카테고리, 장소 추천 카드, 상세 화면 및 지도 연결.</p></div>
-            <div class="tech-label">검증</div>
-            <div><h3>Python unittest · Node.js · Playwright</h3><p>거리 계산, 추천 빈 구간, GPS 및 모바일 동작의 테스트 기록.</p></div>
-          </div>
-          <div class="memo-box"><span>기록의 범위</span><p>기술 내용은 보관 중인 프로젝트 개발노트에 기재된 범위를 기준으로 정리했다.</p></div>
-          <div class="paper-end"><span>제316호 / 개발 기록</span><span>04 / 05</span></div>
-        </section>
+        <section class="paper-page" data-title="서비스 조사" data-page="2" aria-label="서비스 조사" hidden><div class="paper-topline"><span>CBZP · 감사원</span><span>기록 / 02</span></div><p class="page-kicker">SERVICE / 02</p><h2>서비스 조사 · 테마 확장</h2><p class="paper-lede"><strong>대전의 기묘한 여행</strong>은 기준점 주변을 100m씩 넓히며 장소를 찾는 서비스다. 장소 추천에 이어 주차장 안내를 테마2로 개발 중이다.</p><div class="evidence-grid"><div><span class="evidence-index">01 / 테마1</span><h3>주변 장소 추천</h3><p>최초 100m 이내에서 카테고리별 최대 10곳을 추천하고 100m 단위로 탐색 범위를 확장한다. 상한은 5km다.</p></div><div><span class="evidence-index">02 / 목록·지도</span><h3>P1 모바일 개선</h3><p>목록·지도 전환 후에도 이전·다음 100m 및 다시 추천 기능을 유지한다. 지도는 터치·마우스 이동을 잠그되 다음 100m 버튼으로만 범위를 조절하도록 요구했다.</p></div><div><span class="evidence-index">03 / 테마2</span><h3>대전 주차장 안내</h3><p>목적지 주변 유·무료 주차장을 근접 순으로 탐색한다. 기준점에서 0~500m를 시작 범위로 삼고 이후 100m씩 확장한다. 실시간 잔여면수는 제공되는 주차장에 한해 표시한다.</p></div><div><span class="evidence-index">04 / 테마3 후보</span><h3>전국 축제지도</h3><p>지역축제와 음악·공연 등 축제를 전국 범위로 탐색하는 후보 기획. 구현·배포 완료 기능으로 표기하지 않는다.</p></div></div><p class="paper-note"><strong>상태 구분:</strong> 테마1은 배포·개선 중, 테마2는 주차장 API 정보 보강 및 QA 중, 테마3는 후보 기획 단계다. 지도 화살표+장소명, 주차요금·주차면수 노출 등 최신 QA 결과는 아직 확정하지 않았다.</p><div class="paper-end"><span>제316호 / 서비스 기록</span><span>03 / 05</span></div></section>
+        <section class="paper-page" data-title="개발 기록" data-page="3" aria-label="개발 기록" hidden><div class="paper-topline"><span>CBZP · 감사원</span><span>기록 / 03</span></div><p class="page-kicker">DEVELOPMENT / 03</p><h2>개발·API·QA 기록</h2><p class="paper-lede">초기 MVP, 현재 서비스 구조, 2026년 11월 P1·테마2 개선 요청을 구분해 기록한다.</p><div class="tech-record"><div class="tech-label">초기 MVP</div><div><h3>Python · FastAPI · SQLite · Leaflet</h3><p>위치 기반 추천, 지도 표현과 사용자 행동 이벤트를 검증하던 초기 구조.</p></div><div class="tech-label">공개 서비스</div><div><h3>JavaScript · Cloudflare Workers · D1</h3><p>장소 데이터 제공, 추천 요청, 상세 진입·내비게이션 클릭 로깅을 담당하는 웹 구조.</p></div><div class="tech-label">주차장 데이터</div><div><h3>대전 공공데이터 API 연동·보강</h3><p>기존 /6300000/pis 외에 GetPakpListService1 및 /6300000/openapi/rest2 두 API를 추가 확보하여 주차면수·요금·상세정보 보강을 요청했다. 필드별 응답과 운영 반영은 검증 전이다.</p></div><div class="tech-label">지도·모듈</div><div><h3>Leaflet · 공통 상세서사 페이지</h3><p>지도 재표시·컨테이너 크기 계산, 모바일 2열 버튼 및 텍스트 넘침을 QA한다. 장소·주차장 정보는 별도 임시 화면 대신 기존 상세서사 모듈 재사용을 요구했다.</p></div><div class="tech-label">운영 확인</div><div><h3>실시간 데이터 갱신 · 표기 일관성</h3><p>실시간 잔여면수는 최초 1회 조회 후 1분 주기 갱신. 미제공·조회 실패는 ‘실시간 정보 없음’, 만차는 빨간색으로 표기하도록 요구했다. 무료·유료 구분과 기본/추가요금, 총면수 누락은 QA 대상이다.</p></div></div><div class="memo-box"><span>감 과장의 검증 메모</span><p>두 보강 API를 확보한 사실과 실제 응답 필드가 채워져 사용자 화면에 노출되는 것은 별개다. 무료 주차장 누락, 내비 목적지 누락, 지도 미표시, 응답 지연은 해결 여부를 검증해야 한다.</p></div><div class="paper-end"><span>제316호 / 개발 기록</span><span>04 / 05</span></div></section>
         <section class="paper-page" data-title="첨부 문서" data-page="4" aria-label="첨부 및 연결 문서" hidden>
           <div class="paper-topline"><span>CBZP · 감사원</span><span>기록 / 04</span></div>
           <p class="page-kicker">ATTACHMENTS / 04</p>
           <h2>첨부 및 연결 문서</h2>
-          <p class="paper-lede">관련 자료 및 별첨 기록.</p>
+          <p class="paper-lede">대전 서비스와 테마별 최신 개발 기록의 연결 문서.</p>
           <div class="attachment-list">
             <a href="https://djgimyo.com/" target="_blank" rel="noopener noreferrer"><span class="attach-icon">↗</span><span><strong>대전의 기묘한 여행</strong><small>운영 중인 웹서비스 방문</small></span><span aria-hidden="true">↗</span></a>
             
